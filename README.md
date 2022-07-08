@@ -160,3 +160,48 @@ About
 NavLink NavLink behaves the same as Link but in addition, it comes with a new attribute called “activeClassName” which helps us to add the class to the anchor tag when page url will match.
 
 import { NavLink } from 'react-router-dom'; ... ... About   
+
+14.Difference between Axios and fetch?
+Ans-Axios is a Javascript library used to make HTTP requests from node.js or XMLHttpRequests from the browser and it supports the Promise API that is native to JS ES6. It can be used intercept HTTP requests and responses and enables client-side protection against XSRF. It also has the ability to cancel requests. EX:: axios.get('url') .then((response) => {
+  Fetch:
+  The Fetch API provides a fetch() method defined on the window object. It also provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline (requests and responses). The fetch method has one mandatory argument- the URL of the resource to be fetched. This method returns a Promise that can be used to retrieve the response of the request. EX:: fetch('path-to-the-resource-to-be-fetched') .then((response) => {
+   <img src="./fetchandaxios.png">
+   Axios        
+<hr>
+15.What is UseState Hook ?(Implementation)?
+Ans- we can use UseState hook in a counter component like
+    import React,{useState} from "react";
+const UseStatee =()=>{
+   const[number,SetNumber]=useState(0)
+    <!-- return(<div>
+      <h1>hello developers</h1>
+      <h2>now the count in {number}</h2>
+      <button onClick={()=>SetNumber(number+1)}>click here</button>
+    </div>)
+} -->
+export default UseStatee;
+you can component1 page -useStatee component for  useStatehooks.
+<hr>
+16.What is useEffect Hook ?(Implementation).
+ As we know useEffect is used for stoping the extra rerendering process in a components.
+ <!-- import React,{useState ,useEffect} from "react";
+const UseStatee =()=>{
+   const[number,SetNumber]=useState(0);
+//    const[count,SetCount]=useState(5);
+   useEffect(()=>{
+    // function ravii(){
+     
+        console.log("rendering again and again")
+    //    }
+   },[]);
+   
+    return(<div>
+      <h1>hello developers</h1>
+      <h2>now the count in {number}</h2>
+      {/* <h2>{ravii}</h2> */}
+      <button onClick={()=>SetNumber(number+1)}>click here</button>
+    </div>)
+}
+export default UseStatee; -->
+
+refer-components1/useStatee.jsx for code implementation.
