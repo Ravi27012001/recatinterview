@@ -205,3 +205,140 @@ const UseStatee =()=>{
 export default UseStatee; -->
 
 refer-components1/useStatee.jsx for code implementation.
+
+<hr>
+17.What are React Life cycles Explain each one with Example?
+Every component have a lifecycle in react which we can divide in three stage-
+MOunting,UpDate,Unmount
+birth, growth ,death
+Methods in lifecycle
+> render()
+> componentDidMount()
+> componentDidUpdate()
+> componentWillUnmount()
+<!-- 
+import React from "react";
+import Navbar from "./Navbar";
+class LifeCycle extends React.Component{
+    constructor(){
+        super()
+        this.state={
+            show:true,
+        counter:0
+        }
+        console.log("constructor");
+    }
+    componentDidMount(){
+        console.log("component did mount");
+    }
+    componentDidUpdate(pP,pS,sS){
+        console.log("component is updated", pS)
+       
+    }
+     
+    render(){
+        console.log("render");
+        return(<div>
+            <h1>hello developers</h1>
+           { this.state.show ?
+           <Navbar />:null
+           }
+          
+           <button onClick={()=>{this.setState({show:!this.state.show})}}>toggle button</button>
+           <h2>{this.state.counter}</h2>
+           <button onClick={()=>{this.setState({counter:this.state.counter+1})}}>Update counter</button>
+        </div>)
+    }
+}
+
+export default LifeCycle; -->
+refer-component1/lifeCycle.jsx
+
+<hr>
+18.What is UseReducer Hook ?(Implementation)
+UseReducer is similar to useState but when we need to perform more operations that time we can use switch and case in useReducer.It will be little easy for us while we are writting big code.
+<!-- import React,{useReducer} from "react";
+
+const Reducerr =()=>{
+const initialState = 0;
+    function reducer(state,action){
+      switch(action){
+        case "add":
+            return state +1;
+        case "substract":
+            return state-1;
+        case "reset":
+            return 0;
+            default :  return state        
+      }
+
+    } ;
+   const[count,dispatch] = useReducer(reducer,initialState);
+    return(<div>
+        <h1>hello web developers.</h1>
+        <h2>{count}</h2>
+        <button onClick={()=>dispatch("add")}>Add</button>
+        <button onClick={()=>dispatch("reset")}>Reset</button>
+        <button onClick={()=>dispatch("substract")}>Substract</button>
+    </div>)
+}
+export default Reducerr; -->
+
+19. What is UseMemo Hook ?(Implementation)
+  The useMemo Hook only runs when one of its dependencies update. This can improve performance. The useMemo and useCallback Hooks are similar.
+  <!-- import React,{useState,useMemo} from "react";
+
+const Numbers = ()=>{
+   const[inc,SetInc]= useState(0);
+   const[dec,SetDec]=useState(100);
+   const UseMemoMultiplication = useMemo(
+    function Multiply (){
+        console.log("function is rendered")
+        return inc*10;
+       },[inc]);
+   
+
+   return(<div>
+    <h1>Increased number is {inc}</h1>
+    <h1>Decreased number is {dec}</h1>
+    <h2>multiplication no is {UseMemoMultiplication}</h2>
+   <button onClick={()=>SetInc(inc+1)}>increase</button>
+   <button onClick={()=>SetDec(dec-1)}>decrease</button>
+   </div>)
+};
+
+export default Numbers; -->
+refer-component1-useMemoo
+<hr>
+20.What is Context api?
+Ans-The Context API is a React structure that enables you to exchange unique details and assists in solving prop-drilling from all levels of your application. (or) Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+For example, authenticated users, locale preferences, UI themes need to be accessed in the application by many components.
+
+const {Provider, Consumer} = React.createContext(defaultValue)
+<hr>
+21.Difference between callback and useCallback Hook ?
+Ans- callback is used for passing a object or argument to a function where as usecallback is a hook ,in this we can pass a function to the another function.
+The callback function is invoked when setState finished and the component gets rendered. Since setState() is asynchronous the callback function is used for any post action. Note: It is recommended to use lifecycle method rather than this callback function.
+<hr>
+22.What is Props Drilling Concept ?What is State Uplifting ?
+Ans-Prop Drilling :
+It is the process by which you pass data from one component of the React Component tree to another by going through other components that do not need the data but only help in passing it around.
+
+State Uplifting:
+When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+<hr>
+23.Difference between useEffect and useContext ?
+Ans- useEffect :
+It allows us to implement all of the lifecycle hooks from within a single function API. // this will run when the component mounts and anytime the stateful data changes React.useEffect(() => { alert('Hey, Nads here!'); });
+
+// this will run, when the component is first initialized React.useEffect(() => { alert('Hey, Nads here!'); }, []);
+
+// this will run only when count state changes React.useEffect(() => { fetch('nads').then(() => setLoaded(true)); }, [count]);
+
+// this will run when the component is destroyed or before the component is removed from UI. React.useEffect(() => { alert('Hey, Nads here'); return () => alert('Goodbye Component'); });
+useContext :
+This hook allows us to work with React's Context API, which itself a mechanism to allow us to share data within it's component tree without passing through props. It basically removes prop-drilling const ans = { right:right, wrong:wrong  }
+<hr>
+
+
