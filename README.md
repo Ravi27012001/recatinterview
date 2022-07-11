@@ -340,5 +340,31 @@ It allows us to implement all of the lifecycle hooks from within a single functi
 useContext :
 This hook allows us to work with React's Context API, which itself a mechanism to allow us to share data within it's component tree without passing through props. It basically removes prop-drilling const ans = { right:right, wrong:wrong  }
 <hr>
+Q24.High Order Component in react js ?
+Ans-A higher oredr component is a function that takes a component as parameter and return another by andding some functionalities to it.basically it prevents us yo write a same code agian and again.
+We call them pure components because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components. const EnhancedComponent = higherOrderComponent(WrappedComponent)
+<hr>
+Q25.Do you know about SEO ? Is it true that react js supports SEO support?
+Ans- SEO stands for “search engine optimization.” In simple terms, it means the process of improving your site to increase its visibility when people search for products or services related to your business in Google, Bing, and other search engines. The better visibility your pages have in search results, the more likely you are to garner attention and attract prospective and existing customers to your business.
+<hr>
+Q26.clean up in useEffect?
+the useEffect cleanup is a function in the useEffect Hook that allows us to tidy up our code before our component unmounts. When our code runs and reruns for every render, useEffect also cleans up after itself using the cleanup function.
+
+The useEffect Hook is built in a way that we can return a function inside it and this return function is where the cleanup happens. The cleanup function prevents memory leaks and removes some unnecessary and unwanted behaviors.
+<hr>
+Q27.What is the use of useCallback and useMemo?
+suppose we have an expensive function that runs on every render.
+When changing the count or adding a todo, you will notice a delay in execution.
+To fix this performance issue, we can use the useMemo Hook to memoize the expensiveCalculation function. This will cause the function to only run when needed.
+
+usecallback-The useCallback hook is used when you have a component in which the child is rerendering again and again without need.
+Pass an inline callback and an array of dependencies. useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed.
+<hr>
+Q28.Why do we need keys in react less?
+The main purpose of keys is to help React differentiate and distinguish elements from each other, increasing its performance when diffing between the virtual and real DOM. 
+Unique IDs are the best value to assign to keys. (or) "Key" prop is used to look pretty, and there is no benefit whatsoever. "Key" prop is a way for React to identify a newly added item in a list and compare it during the "diffing" algorithm. It is one of the attributes in HTML. It is NOT commonly used in an array.
+<hr>
+Q29.Do you know about redux?
+Redux is a javascript library it is mostly used because of  It serves as a centralized store for state that needs to be used across your entire application doesen't matter whether it is a child component or a parent components.we can access deta from redux store easily which is in use of any components in that app.
 
 
