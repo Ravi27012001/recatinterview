@@ -366,5 +366,37 @@ Unique IDs are the best value to assign to keys. (or) "Key" prop is used to look
 <hr>
 Q29.Do you know about redux?
 Redux is a javascript library it is mostly used because of  It serves as a centralized store for state that needs to be used across your entire application doesen't matter whether it is a child component or a parent components.we can access deta from redux store easily which is in use of any components in that app.
+<hr>
+Q30.What is an event in react?
+AnsAn event is an action that could be triggered as a result of the user action or system generated event. For example, a mouse click, loading of a web page, pressing a key, window resizes, and other interactions are called events.
+
+React has its own event handling system which is very similar to handling events on DOM elements. The react event handling system is known as Synthetic Events. The synthetic event is a cross-browser wrapper of the browser's native event.
+<hr>
+Q31.What is memory leak and how to overcome?
+Ans-Memory leak occurs when programmers create a memory in heap and forget to delete it.
+
+The consequences of memory leak is that it reduces the performance of the computer by reducing the amount of available memory. Eventually, in the worst case, too much of the available memory may become allocated and all or part of the system or device stops working correctly, the application fails, or the system slows down vastly .
+
+Memory leaks are particularly serious issues for programs like daemons and servers which by definition never terminate.
+<br>
+Q32.Do you prefer function-based or class component and why ?
+Functional Component. A functional component is just a plain JavaScript pure function that accepts props as an argument and returns a React element(JSX). A class component requires you to extend from React. Component and create a render function which returns a React element. There is no render method used in functional components.
+<br>
+Q33.Explain reducer as pure function in redux?
+Ans-Pure functions are predictable. Reducers are the only way to change states in Redux. It is the only place where you can write logic and calculations. Reducer function will accept the previous state of app and action being dispatched, calculate the next state and returns the new object.
+<br>
+Q34.Why do we use redux thunk?
+Ans-The most common use case for Redux Thunk is for communicating asynchronously with an external API to retrieve or save data. Redux Thunk makes it easy to dispatch actions that follow the lifecycle of a request to an external API. Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises. One of the main use cases for this middleware is for handling actions that might not be synchronous, for example, using axios to send a GET request.
+<br>
+Q.What do you know about NPM?
+Ans-NPM stands for Node Package Module
+  NPM is the world's largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.
+
+npm consists of three distinct components:
+
+the website
+the Command Line Interface (CLI)
+the registry
+
 
 
